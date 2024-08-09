@@ -27,14 +27,14 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    align-items: center; /* 居中內容 */
+    align-items: center;
 }
 
 .links {
     display: flex;
-    flex-wrap: wrap; /* 允許內容換行 */
-    justify-content: center; /* 居中對齊鏈接 */
-    gap: 30px; /* 增加按鈕之間的間距 */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
     margin-top: 30px;
 }
 
@@ -42,34 +42,71 @@ body {
     color: #ffffff;
     text-decoration: none;
     font-size: 1.2em;
-    transition: color 0.3s, transform 0.3s; /* 添加變換過渡效果 */
+    transition: color 0.3s, transform 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #333333;
     border-radius: 12px;
-    padding: 15px; /* 縮小內邊距以適應小屏幕 */
-    width: 100px; /* 統一的寬度 */
-    height: 100px; /* 統一的高度 */
+    padding: 15px;
+    width: 100px;
+    height: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     justify-content: center;
-    align-items: center;
     text-align: center;
 }
 
 .links a:hover {
     color: #cccccc;
     background-color: #444444;
-    transform: translateY(-10px); /* 懸停時向上移動 */
+    transform: translateY(-10px);
 }
 
 .social-icon {
-    font-size: 50px; /* 圖標大小 */
-    margin-bottom: 5px; /* 圖標和文字之間的間距 */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* 立體感效果 */
+    font-size: 50px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
-/* 媒體查詢：適應小屏幕 */
+.resume-section {
+    background-color: #222222;
+    padding: 50px 20px;
+    margin: 50px 0;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.resume-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.resume-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ffffff;
+    text-align: left;
+}
+
+.resume-content h3 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    color: #dddddd;
+}
+
+.resume-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.resume-content li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
 @media (max-width: 600px) {
     .header h1 {
         font-size: 1.5em;
@@ -89,9 +126,16 @@ body {
     .social-icon {
         font-size: 40px;
     }
+
+    .resume-content h3 {
+        font-size: 1.3em;
+    }
+
+    .resume-content li {
+        font-size: 1em;
+    }
 }
 
-/* 媒體查詢：適應中等屏幕 */
 @media (max-width: 992px) {
     .header h1 {
         font-size: 2em;
@@ -102,5 +146,13 @@ body {
         width: 90px;
         height: 90px;
         padding: 15px;
+    }
+
+    .resume-content h3 {
+        font-size: 1.4em;
+    }
+
+    .resume-content li {
+        font-size: 1.1em;
     }
 }
