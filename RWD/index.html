@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单页应用</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<aside class="sidebar">
+    <button class="menu-btn" onclick="toggleClasses(this)">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </button>
+
+    <div class="menu-content">
+        <div class="Logo-container">
+            <img src="ai.jpg" alt="Logo" class="Logo">
+        </div>
+
+        <ul class="sidebar-nav">
+            <li class="nav-item" onclick="showSection('home')">主頁</li>
+            <li class="nav-heading">面板</li>
+            <li class="nav-item" onclick="showSection('forms')">表单</li>
+            <li class="nav-item" onclick="showSection('tables')">表格</li>
+            <li class="nav-item" onclick="showSection('charts')">图表</li>
+            <li class="nav-item" onclick="showSection('icons')">图标</li>
+            <li class="nav-heading">页面</li>
+            <li class="nav-item" onclick="showSection('profile')">个人资料</li>
+            <li class="nav-item" onclick="showSection('faq')">常见问题</li>
+        </ul>
+    </div>
+</aside>
+
+<main>
+    <div id="home" class="content-section">
+        <!DOCTYPE html>
+        <html lang="zh-Hant">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="1.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        </head>
+        <body>
+            <div class="header">
+                <h1>我是王俊麒</h1>
+            </div>
+        
+            <div class="container">
+                <h2>歡迎來到我的個人頁面！</h2>
+                <p>這裡是我的社交媒體連結：</p>
+                <div class="links">
+                    <a href="https://www.instagram.com/_20050104" target="_blank">
+                        <i class="fab fa-instagram social-icon"></i>
+                        Instagram
+                    </a>
+                    <a href="https://line.me/ti/p/onrtpwaW5P" target="_blank">
+                        <i class="fab fa-line social-icon"></i>
+                        Line
+                    </a>
+                    <a href="https://www.tiktok.com/@_20050104?_t=8ojK9v4iLFI&_r=1" target="_blank">
+                        <i class="fab fa-tiktok social-icon"></i>
+                        TikTok
+                    </a>
+                    <a href="https://github.com/wangj6231" target="_blank">
+                        <i class="fab fa-github social-icon"></i>
+                        GitHub
+                    </a>
+                </div>
+                <div class="scroll-down">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        
+            <div class="resume-section" id="resume">
+                <h2>履歷</h2>
+                <div class="resume-content">
+                    <h3>聯絡信息</h3>
+                    <ul>
+                        <li><strong>聯絡電話:</strong> 0902191687</li>
+                        <li><strong>Email:</strong> wangj6231@gmail.com</li>
+                    </ul>
+            
+                    <h3>工作經歷</h3>
+                    <ul>
+                        <li><strong>軟體工程師</strong> - 自由接案 (在職)</li>
+                        <li><strong>全家便利商店</strong> - 服務員 (在職)</li>
+                    </ul>
+            
+                    <h3>教育背景</h3>
+                    <ul>
+                        <li><strong>興大附中</strong> - 高中學位 (109~112)</li>
+                        <li><strong>亞洲大學</strong> - 大學學位 (在學)</li>
+                    </ul>
+            
+                    <h3>技能</h3>
+                    <ul>
+                        <li>程式設計(Python,html,css,js,C)</li>
+                        <li>電腦維修</li>
+                        <li>影音剪輯</li>
+                    </ul>
+                </div>
+            </div>
+            
+        
+            <script src="1.js"></script>
+        </body>
+        </html>
+        
+    </div>
+    <div id="forms" class="content-section" style="display:none;">
+        <h1>表单</h1>
+        <p>这是表单内容区域。</p>
+    </div>
+    <div id="tables" class="content-section" style="display:none;">
+        <h1>表格</h1>
+        <p>这是表格内容区域。</p>
+    </div>
+    <div id="charts" class="content-section" style="display:none;">
+        <h1>图表</h1>
+        <p>这是图表内容区域。</p>
+    </div>
+    <div id="icons" class="content-section" style="display:none;">
+        <h1>图标</h1>
+        <p>这是图标内容区域。</p>
+    </div>
+    <div id="profile" class="content-section" style="display:none;">
+        <h1>个人资料</h1>
+        <p>这是个人资料内容区域。</p>
+    </div>
+    <div id="faq" class="content-section" style="display:none;">
+        <h1>常见问题</h1>
+        <p>这是常见问题内容区域。</p>
+    </div>
+</main>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
